@@ -28,3 +28,6 @@
 [submodule "utils/dev/automake"]
 	path = utils/dev/automake
 	url = git://git.savannah.gnu.org/automake.git
+[submodule "utils/dev/otp"]
+	path = utils/dev/otp
+	url = git@github.com:/erlang/otp

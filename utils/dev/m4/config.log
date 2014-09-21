@@ -511,7 +511,7 @@ configure:6760: result: -std=gnu99
 configure:6832: autobuild project... GNU M4
 configure:6838: autobuild revision... 1.4.17
 configure:6843: autobuild hostname... ken.home.desk
-configure:6854: autobuild timestamp... 20140921T052333Z
+configure:6854: autobuild timestamp... 20140921T070040Z
 configure:7865: checking for unsigned long long int
 configure:7913: result: yes
 configure:7923: checking for long long int
@@ -643,7 +643,7 @@ configure:8428: $? = 0
 configure:8428: result: yes
 configure:8428: checking for _set_invalid_parameter_handler
 configure:8428: gcc -std=gnu99 -o conftest -g -O2   conftest.c  >&5
-/tmp/ccsafHDZ.o: In function `main':
+/tmp/ccGH06fT.o: In function `main':
 /home/ken/Workspace/Personal/utils/dev/m4/conftest.c:75: undefined reference to `_set_invalid_parameter_handler'
 collect2: ld returned 1 exit status
 configure:8428: $? = 1
@@ -742,7 +742,7 @@ configure:8428: $? = 0
 configure:8428: result: yes
 configure:8428: checking for fpurge
 configure:8428: gcc -std=gnu99 -o conftest -g -O2   conftest.c  >&5
-/tmp/ccPMTqR8.o: In function `main':
+/tmp/ccDltCD2.o: In function `main':
 /home/ken/Workspace/Personal/utils/dev/m4/conftest.c:78: undefined reference to `fpurge'
 collect2: ld returned 1 exit status
 configure:8428: $? = 1
@@ -835,7 +835,7 @@ configure:8428: $? = 0
 configure:8428: result: yes
 configure:8428: checking for __freadahead
 configure:8428: gcc -std=gnu99 -o conftest -g -O2   conftest.c  >&5
-/tmp/ccqvslVd.o: In function `main':
+/tmp/ccrv3PIa.o: In function `main':
 /home/ken/Workspace/Personal/utils/dev/m4/conftest.c:79: undefined reference to `__freadahead'
 collect2: ld returned 1 exit status
 configure:8428: $? = 1
@@ -986,7 +986,7 @@ configure:8428: $? = 0
 configure:8428: result: yes
 configure:8428: checking for secure_getenv
 configure:8428: gcc -std=gnu99 -o conftest -g -O2   conftest.c  >&5
-/tmp/ccKnybkY.o: In function `main':
+/tmp/ccugLPqJ.o: In function `main':
 /home/ken/Workspace/Personal/utils/dev/m4/conftest.c:94: undefined reference to `secure_getenv'
 collect2: ld returned 1 exit status
 configure:8428: $? = 1
@@ -1113,7 +1113,7 @@ configure:8428: $? = 0
 configure:8428: result: yes
 configure:8428: checking for vasnprintf
 configure:8428: gcc -std=gnu99 -o conftest -g -O2   conftest.c  >&5
-/tmp/ccaxlIm5.o: In function `main':
+/tmp/cc4rl8W2.o: In function `main':
 /home/ken/Workspace/Personal/utils/dev/m4/conftest.c:99: undefined reference to `vasnprintf'
 collect2: ld returned 1 exit status
 configure:8428: $? = 1
@@ -5949,7 +5949,7 @@ configure:22500: checking whether fflush works on input streams
 configure:22574: result: no
 configure:22607: checking for _fseeki64
 configure:22607: gcc -std=gnu99 -o conftest -g -O2   conftest.c  >&5
-/tmp/ccmLhW2v.o: In function `main':
+/tmp/ccifUgvS.o: In function `main':
 /home/ken/Workspace/Personal/utils/dev/m4/conftest.c:234: undefined reference to `_fseeki64'
 collect2: ld returned 1 exit status
 configure:22607: $? = 1
