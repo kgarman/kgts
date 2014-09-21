@@ -12,4 +12,4 @@
 	url = git@github.com:/klacke/yaws
 [submodule "libs/erl/rafter"]
 	path = libs/erl/rafter
-	url = git@github.com:/andrewjstone/rafter
+	url = git@github.com:/kgarman/rafter
