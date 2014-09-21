@@ -1,5 +1,5 @@
 
-TARGETS = util libs apps
+TARGETS = utils libs apps
 
 BUILDTARGETS = $(addsuffix .build,$(TARGETS))
 

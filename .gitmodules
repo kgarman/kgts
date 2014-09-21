@@ -13,3 +13,18 @@
 [submodule "libs/erl/rafter"]
 	path = libs/erl/rafter
 	url = git@github.com:/kgarman/rafter
+[submodule "utils/dev/lksctp-tools"]
+	path = utils/dev/lksctp-tools
+	url = git://github.com/borkmann/lksctp-tools.git
+[submodule "utils/dev/libtool"]
+	path = utils/dev/libtool
+	url = git://git.savannah.gnu.org/libtool.git
+[submodule "utils/dev/autoconf"]
+	path = utils/dev/autoconf
+	url = git://git.sv.gnu.org/autoconf
+[submodule "utils/dev/GNU-m4"]
+	path = utils/dev/GNU-m4
+	url = git@github.com:/gvvaughan/GNU-m4
+[submodule "utils/dev/automake"]
+	path = utils/dev/automake
+	url = git://git.savannah.gnu.org/automake.git
