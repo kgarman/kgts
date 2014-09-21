@@ -48,9 +48,9 @@ m4.clean:
 # autoconf
 #
 
-autoconf.build: $(TARGETDIR)/bin/autoconf m4.build
+autoconf.build: $(TARGETDIR)/bin/autoconf
 
-$(TARGETDIR)/bin/autoconf: autoconf
+$(TARGETDIR)/bin/autoconf: autoconf $(TARGETDIR)/bin/m4
 	make -C $<
 	make -C $< install
 
@@ -84,9 +84,9 @@ autoconf.clean:
 # automake
 #
 
-automake.build: $(TARGETDIR)/bin/automake autoconf.build
+automake.build: $(TARGETDIR)/bin/automake
 
-$(TARGETDIR)/bin/automake: automake
+$(TARGETDIR)/bin/automake: automake $(TARGETDIR)/bin/autoconf
 	make -C $<
 	make -C $< install
 
@@ -116,9 +116,9 @@ automake.clean:
 # libtool
 #
 
-libtool.build: $(TARGETDIR)/bin/libtool automake.build
+libtool.build: $(TARGETDIR)/bin/libtool
 
-$(TARGETDIR)/bin/libtool: libtool/Makefile
+$(TARGETDIR)/bin/libtool: libtool/Makefile $(TARGETDIR)/bin/automake
 	make -C libtool
 	make -C libtool install
 
@@ -151,9 +151,9 @@ libtool.clean:
 # lksctp-tools
 #
 
-lksctp-tools.build: $(TARGETDIR)/lib/lksctp-tools libtool.build
+lksctp-tools.build: $(TARGETDIR)/lib/libsctp.a
 
-$(TARGETDIR)/lib/lksctp-tools: lksctp-tools/Makefile
+$(TARGETDIR)/lib/libsctp.a: lksctp-tools/Makefile $(TARGETDIR)/bin/libtool
 	make -C lksctp-tools
 	make -C lksctp-tools install
 
@@ -164,7 +164,6 @@ lksctp-tools/configure:
 	cd lksctp-tools && ./bootstrap
 
 lksctp-tools.clean:
-	make -C $(@:.clean=) clean
 	rm -f $(TARGETDIR)/bin/checksctp
 	rm -f $(TARGETDIR)/bin/sctp_darn
 	rm -f $(TARGETDIR)/bin/sctp_status
