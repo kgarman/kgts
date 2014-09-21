@@ -5,7 +5,7 @@ TARGETDIR := $(realpath $(dir $(abspath $(MAKEFILE_LIST)))/..)
 ERLEXEC = $(TARGETDIR)/bin/erl
 REBAREXEC = $(TARGETDIR)/bin/rebar
 
-TARGETS = m4 autoconf automake libtool lksctp-tools otp rebar
+TARGETS = autoconf automake libtool lksctp-tools otp rebar
 
 PATH := $(TARGETDIR)/bin:$(PATH)
 
@@ -23,34 +23,12 @@ build: $(BUILDTARGETS)
 clean: $(CLEANTARGETS)
 
 #
-# m4
-#
-
-m4.build: $(TARGETDIR)/bin/m4
-
-$(TARGETDIR)/bin/m4: m4
-	make -C $<
-	make -C $< install
-
-m4: m4/configure
-	cd $@ && ./configure --prefix=$(TARGETDIR)
-
-m4.clean:
-	make -C $(@:.clean=) clean
-	rm -f $(TARGETDIR)/bin/$(@:.clean=)
-	rm -f $(TARGETDIR)/share/info/dir
-	rm -f $(TARGETDIR)/share/info/m4.info
-	rm -f $(TARGETDIR)/share/info/m4.info-1
-	rm -f $(TARGETDIR)/share/info/m4.info-2
-	rm -f $(TARGETDIR)/share/man/man1/m4.1
-
-#
 # autoconf
 #
 
 autoconf.build: $(TARGETDIR)/bin/autoconf
 
-$(TARGETDIR)/bin/autoconf: autoconf $(TARGETDIR)/bin/m4
+$(TARGETDIR)/bin/autoconf: autoconf
 	make -C $<
 	make -C $< install
 
