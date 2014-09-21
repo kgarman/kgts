@@ -1,0 +1,22 @@
+{application, kws,
+ [
+  {description, "Ken's Web Server"},
+  {vsn, "1"},
+  {registered, [kws_init_handler]},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  lager
+                 ]},
+  {mod, { kws_app, []}},
+  {env,
+   [
+    {docroot, "www"},
+    {global_conf, [{id, kws},
+                   {logdir, "log"}]},
+    {server_confs, [[{servername, "www.kehnneh.pc"},
+                     {docroot, "www"},
+                     {port, 80},
+                     {listen, {0, 0, 0, 0}}]]}
+   ]}
+ ]}.

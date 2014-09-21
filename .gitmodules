@@ -1,0 +1,15 @@
+[submodule "util/dev/rebar"]
+	path = util/dev/rebar
+	url = git@github.com:/basho/rebar
+[submodule "util/dev/otp"]
+	path = util/dev/otp
+	url = git@github.com:/erlang/otp
+[submodule "libs/erl/lager"]
+	path = libs/erl/lager
+	url = git@github.com:/basho/lager
+[submodule "libs/erl/yaws"]
+	path = libs/erl/yaws
+	url = git@github.com:/klacke/yaws
+[submodule "libs/erl/rafter"]
+	path = libs/erl/rafter
+	url = git@github.com:/andrewjstone/rafter

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <erl>
+            out(Arg) ->
+                {ehtml, {title, [], erlang:atom_to_list(node())}}.
+        </erl>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <!-- <script src="script.js"></script> -->
+    </head>
+    <body>
+        <erl>
+            out(Arg) ->
+                {ehtml, {p, [], erlang:atom_to_list(node())}}.
+        </erl>
+    </body>
+</html>
