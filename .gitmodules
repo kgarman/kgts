@@ -15,7 +15,7 @@
 	url = git@github.com:/kgarman/rafter
 [submodule "utils/dev/lksctp-tools"]
 	path = utils/dev/lksctp-tools
-	url = git://github.com/borkmann/lksctp-tools.git
+	url = git@github.com:/borkmann/lksctp-tools
 [submodule "utils/dev/libtool"]
 	path = utils/dev/libtool
 	url = git://git.savannah.gnu.org/libtool.git
